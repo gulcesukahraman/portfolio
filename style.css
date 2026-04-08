@@ -160,80 +160,46 @@ footer {
     80% { opacity: 0; top: 28px; }
     100% { opacity: 0; }
 }
-/* KESİN ÇÖZÜM: MOBİL ZORLAMA PAKETİ */
-@media screen and (max-width: 600px) {
-    /* 1. Menü Sıkışmasını ve Üst Üste Binmeyi Bitir */
-    nav {
-        display: block !important; /* Yan yana dizilimi iptal et */
-        text-align: center !important;
-        padding: 10px 0 !important;
-        height: auto !important;
-        background: #09090b !important;
-    }
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gülcesu Kahraman | Industrıal Desıgner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    .logo {
-        display: block !important;
-        margin-bottom: 5px !important;
-        font-size: 1rem !important;
-    }
+    <nav>
+        <div class="logo">GK</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="experience.html">Experıence</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    .nav-links {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 8px !important;
-        padding: 0 5px !important;
-    }
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">GÜLCESU KAHRAMAN</h1>
+            <p class="hero-subtitle">Industrıal Desıgner</p>
+        </div>
+    </section>
 
-    .nav-links a {
-        font-size: 9px !important;
-        letter-spacing: 0.1em !important;
-    }
+    <section id="about">
+        <div class="container">
+            <h2>ABOUT</h2>
+            <p>I graduated from the Department of Industrial Design at Yeditepe University. Through internships at Baykar Technology and GEMAK Group, I gained experience in product development, manufacturing processes, and production-oriented design.</p>
+            <p>Following this, I worked as a creative director in the textile industry, acquiring knowledge in website design and e-commerce. Digital design and branding projects further strengthened my multifaceted perspective.</p>
+            <p>With my creative and analytical approach, I aim to develop innovative products that combine technology, functionality, and aesthetics, and to create value within a dynamic team.</p>
+        </div>
+    </section>
 
-    /* 2. Görseli Aşağı Kaydır (Yüzü Kurtar) */
-    .hero {
-        background-attachment: scroll !important;
-        background-position: 50% 15% !important; /* Görselin üst kısmını gösterir */
-        background-size: cover !important;
-        display: flex !important;
-        align-items: flex-end !important; /* Yazıyı aşağı indirir */
-        padding-bottom: 60px !important;
-    }
-
-    .hero-content {
-        transform: none !important;
-        width: 100% !important;
-    }
-
-    .hero-title {
-        font-size: 1.4rem !important;
-        letter-spacing: 0.2em !important;
-        margin-bottom: 10px !important;
-    }
-
-    .hero-subtitle {
-        font-size: 9px !important;
-        letter-spacing: 0.3em !important;
-    }
-
-    /* 3. Sayfa Yapısını Mobilde Basitleştir */
-    section {
-        height: auto !important; /* Sticky efektini mobilde tamamen kapatır */
-        padding: 60px 20px !important;
-        display: block !important;
-    }
-
-    .container {
-        padding: 0 !important;
-    }
-
-    h2 {
-        font-size: 1.4rem !important;
-        margin-bottom: 25px !important;
-    }
-
-    p {
-        font-size: 14px !important;
-        line-height: 1.6 !important;
-    }
-}
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Let's collaborate on your next design project.</p>
+            <p style="color: white;">gulcesukahraman@example.com</p>
