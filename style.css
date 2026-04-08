@@ -86,12 +86,12 @@ nav {
     text-align: center;
 }
 
-/* SCROLL ANİMASYONU (REVEAL) - CUBIC BEZIER İLE AKICILIK ARTIRILDI */
 .reveal {
     opacity: 0;
-    transform: translateY(60px); /* Başlangıç mesafesi biraz artırıldı */
-    transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1); /* Daha profesyonel yavaşlama eğrisi */
-    will-change: transform, opacity;
+    transform: translateY(30px); /* Mesafeyi azalttık ki daha kolay tetiklensin */
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    visibility: visible; /* Gizli olsa bile tarayıcı yerini hesaplasın */
 }
 
 .reveal.active {
