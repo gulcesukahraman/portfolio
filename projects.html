@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECTS | GÜLCESU KAHRAMAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Proje Sayfasına Özel Eklemeler */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            position: relative;
+            background: #18181b;
+            border-radius: 4px;
+            overflow: hidden;
+            aspect-ratio: 16 / 10;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Görsel Alanı */
+        .project-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(20%);
+            transition: 0.5s;
+        }
+
+        .project-card:hover .project-img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        /* Proje Bilgisi (Üstüne gelince görünen) */
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+        }
+
+        .project-info h3 {
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .project-info p {
+            color: #a1a1aa;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GK</div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section style="height: 30vh; display: flex; align-items: flex-end; padding-bottom: 30px;">
+        <div class="container" style="width: 100%; padding: 0 10%;">
+            <h1 style="font-weight: 200; letter-spacing: 0.4em; text-transform: uppercase; border-bottom: 1px solid #27272a; padding-bottom: 20px;">PROJECTS</h1>
+        </div>
+    </section>
+
+    <section class="container" style="padding: 20px 10% 100px 10%;">
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('kitchen-render.jpeg');"></div>
+                <div class="project-info">
+                    <h3>FUTURISTIC KITCHEN UNIT</h3>
+                    <p>Minimalist Kitchen Sink & Cabinet Design</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('living-room.jpeg');"></div>
+                <div class="project-info">
+                    <h3>MODERN LIVING SPACE</h3>
+                    <p>Interior Lighting & Furniture Concepts</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img" style="background-color: #27272a;"></div>
+                <div class="project-info">
+                    <h3>VALENTINE'S COLLECTION</h3>
+                    <p>Product Design Concepts</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #52525b; font-size: 0.8rem;">
+        &copy; 2026 GÜLCESU KAHRAMAN
+    </footer>
+
+</body>
+</html>
