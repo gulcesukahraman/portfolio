@@ -30,19 +30,41 @@
 
     <section id="about" class="reveal">
         <div class="container">
-            <h2>ABOUT</h2>
-            <p>
-                I graduated from the Department of Industrial Design at Yeditepe University. Through internships at Baykar Technology and GEMAK Group, I gained experience in product development, manufacturing processes, and production-oriented design. 
-            </p>
-            <p>
-                Following this, I worked as a creative director in the textile industry, acquiring knowledge in website design and e-commerce. Digital design and branding projects further strengthened my multifaceted perspective.
-            </p>
-            <p>
-                With my creative and analytical approach, I aim to develop innovative products that combine technology, functionality, and aesthetics, and to create value within a dynamic team.
-            </p>
+            <h2 class="reveal-item">ABOUT</h2>
+            <p class="reveal-item">I graduated from the Department of Industrial Design at Yeditepe University. Through internships at Baykar Technology and GEMAK Group, I gained experience in product development, manufacturing processes, and production-oriented design.</p>
+            <p class="reveal-item">Following this, I worked as a creative director in the textile industry, acquiring knowledge in website design and e-commerce. Digital design and branding projects further strengthened my multifaceted perspective.</p>
+            <p class="reveal-item">With my creative and analytical approach, I aim to develop innovative products that combine technology, functionality, and aesthetics, and to create value within a dynamic team.</p>
         </div>
     </section>
 
     <section id="contact" class="reveal">
         <div class="container">
-            <h2>
+            <h2 class="reveal-item">Contact</h2>
+            <p class="reveal-item">Let's collaborate on your next design project.</p>
+            <p class="reveal-item" style="color: white;">gulcesukahraman@example.com</p> 
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 GÜLCESU KAHRAMAN. ALL RIGHTS RESERVED.
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
