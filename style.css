@@ -1,23 +1,59 @@
-/* Yazıların silinmesini engellemek için animasyonu otomatik yaptık */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    /* Sayfa açıldığında 0.5 saniye bekleyip kendi kendine başlar */
-    animation: autoReveal 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+/* TEMEL AYARLAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* İlk bölüm hemen gelsin, diğerleri hafif gecikmeli gelsin dersen: */
-#about { animation-delay: 0.2s; }
-#contact { animation-delay: 0.4s; }
-
-@keyframes autoReveal {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #09090b;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Arka planın Çağla Enginer stilinde sabit kalması */
+/* NAVİGASYON */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.logo {
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #a1a1aa;
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* HERO SECTION - PARALLAX ETKİSİ */
 .hero {
     position: relative;
     height: 100vh;
@@ -28,5 +64,19 @@
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed; /* Arka plan kayarken sabit kalır */
 }
+
+.hero-title {
+    font-size: clamp(1.2rem, 5vw, 2.8rem);
+    font-weight: 200;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+    color: #a1a1aa;
