@@ -15,7 +15,7 @@ body, html {
     overflow-x: hidden;
 }
 
-/* NAVİGASYON (HOME, EXPERIENCE vs.) */
+/* NAVİGASYON */
 nav {
     position: fixed;
     top: 0;
@@ -118,12 +118,14 @@ h2 {
     padding-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    color: white;
 }
 
 p {
-    color: #a1a1aa;
+    color: #d4d4d8; /* Yazıların koyu zeminde görünmesi için renk güncellendi */
     line-height: 1.8;
     font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
 /* MOUSE SCROLL ICON */
