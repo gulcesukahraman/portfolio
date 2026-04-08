@@ -1,4 +1,3 @@
-/* 1. TEMEL AYARLAR - Kaydırmayı aktif eder */
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +6,16 @@
 
 body, html {
     width: 100%;
-    min-height: 100vh; /* height yerine min-height kullanarak sayfanın uzamasına izin verdik */
+    min-height: 100vh;
     background-color: #09090b;
     color: white;
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    overflow-y: auto; /* Kaydırma çubuğunun kesin açık olduğundan emin olduk */
+    overflow-y: auto;
 }
 
-/* 2. NAVİGASYON */
+/* NAVİGASYON */
 nav {
     position: fixed;
     top: 0;
@@ -25,8 +24,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
-    background: linear-gradient(to bottom, rgba(9, 9, 11, 0.95), transparent);
+    padding: 30px 10%;
+    background: linear-gradient(to bottom, rgba(9, 9, 11, 0.9), transparent);
 }
 
 .logo {
@@ -52,7 +51,7 @@ nav {
 
 .nav-links a:hover { color: white; }
 
-/* 3. HERO SECTION */
+/* HERO SECTION */
 .hero {
     position: relative;
     height: 100vh;
@@ -60,14 +59,14 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpeg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
 .hero-title {
-    font-size: clamp(1.5rem, 6vw, 3.5rem); /* Sıkışmayı önlemek için minimum değeri artırdık */
+    font-size: clamp(2rem, 8vw, 4.5rem);
     font-weight: 200;
     letter-spacing: 0.4em;
     text-transform: uppercase;
@@ -76,48 +75,48 @@ nav {
 }
 
 .hero-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #a1a1aa;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.6em;
     text-transform: uppercase;
     text-align: center;
 }
 
-/* 4. SECTIONS - Sıkışmayı önleyen yapı */
+/* SECTIONS */
 section {
     position: relative;
-    padding: 120px 8%;
+    padding: 140px 10%;
     width: 100%;
-    display: block; /* Flexbox'tan çıkarıp blok yaptık ki yazılar rahatlasın */
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto; /* Sayfayı ortalar */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 200;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     border-bottom: 1px solid #27272a;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
 }
 
 p {
-    color: #a1a1aa; /* Beyaz patlamasını önlemek için gri tonuna çektik */
-    line-height: 1.8;
-    font-size: 1.05rem;
-    margin-bottom: 25px;
+    color: #d1d5db;
+    line-height: 1.9;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-weight: 300;
 }
 
-/* 5. ANİMASYON (Garantili Görünürlük) */
+/* ANİMASYON */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateY(40px);
+    transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .reveal.active {
@@ -125,14 +124,14 @@ p {
     transform: translateY(0) !important;
 }
 
-/* 6. MOUSE ICON */
+/* MOUSE ICON */
 .scroll-icon {
     position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    width: 24px;
-    height: 40px;
+    width: 26px;
+    height: 44px;
     border: 2px solid rgba(255,255,255,0.2);
     border-radius: 20px;
 }
@@ -145,12 +144,12 @@ p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 8px;
+    top: 10px;
     border-radius: 2px;
     animation: scrollMove 2s infinite;
 }
 
 @keyframes scrollMove {
-    0% { opacity: 1; top: 8px; }
-    100% { opacity: 0; top: 24px; }
+    0% { opacity: 1; top: 10px; }
+    100% { opacity: 0; top: 28px; }
 }
