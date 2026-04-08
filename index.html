@@ -14,8 +14,8 @@
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-          <li><a href="experience.html">Experıence</a></li>
-             <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experıence</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -28,7 +28,7 @@
         <div class="scroll-icon"></div>
     </section>
 
- <section id="about" class="reveal">
+    <section id="about" class="reveal active">
         <div class="container">
             <h2>ABOUT</h2>
             
@@ -50,18 +50,19 @@
         </div>
     </section>
 
-    <section id="experience" class="reveal">
+    <section id="experience" class="reveal active">
         <div class="container">
             <h2>Experıence</h2>
             <p>From conceptual sketching to high-fidelity 3D renders, I manage the full design cycle including 3D architectural rendering and UI/UX strategy.</p>
         </div>
     </section>
 
-    <section id="contact" class="reveal">
+    <section id="contact" class="reveal active">
         <div class="container">
             <h2>Contact</h2>
             <p>Let's collaborate on your next design project.</p>
-            <p style="margin-top: 10px; color: white;">gulcesukahraman@example.com</p> </div>
+            <p style="margin-top: 10px; color: white;">gulcesukahraman@example.com</p> 
+        </div>
     </section>
 
     <footer style="text-align: center; padding: 40px; color: #52525b; font-size: 0.8rem; letter-spacing: 0.1em;">
@@ -74,14 +75,15 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
+                var elementVisible = 100; // Görünürlük eşiğini biraz düşürdüm
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
                 }
             }
         }
         window.addEventListener("scroll", reveal);
-        // Sayfa ilk açıldığında da kontrol et
+        // Sayfa yüklendiğinde çalışması için zamanlayıcı ekledim
+        window.onload = reveal;
         reveal();
     </script>
 
