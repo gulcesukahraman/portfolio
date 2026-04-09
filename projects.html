@@ -1,126 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJECTS | GÜLCESU KAHRAMAN</title>
+    <title>Gülcesu Kahraman | Industrıal Desıgner</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
-    <style>
-        /* Proje Sayfasına Özel Eklemeler */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .project-card {
-            position: relative;
-            background: #18181b;
-            border-radius: 4px;
-            overflow: hidden;
-            aspect-ratio: 16 / 10;
-            transition: transform 0.4s ease;
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* Görsel Alanı */
-        .project-img {
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            filter: grayscale(20%);
-            transition: 0.5s;
-        }
-
-        .project-card:hover .project-img {
-            filter: grayscale(0%);
-            transform: scale(1.05);
-        }
-
-        /* Proje Bilgisi (Üstüne gelince görünen) */
-        .project-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 30px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            color: white;
-        }
-
-        .project-info h3 {
-            font-weight: 300;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-        }
-
-        .project-info p {
-            color: #a1a1aa;
-            font-size: 0.85rem;
-            margin-top: 5px;
-        }
-    </style>
 </head>
 <body>
 
     <nav>
         <div class="logo">GK</div>
         <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="projects.html">PROJECTS</a></li>
-            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="experience.html">Experıence</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="index.html#contact">CONTACT</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section style="height: 30vh; display: flex; align-items: flex-end; padding-bottom: 30px;">
-        <div class="container" style="width: 100%; padding: 0 10%;">
-            <h1 style="font-weight: 200; letter-spacing: 0.4em; text-transform: uppercase; border-bottom: 1px solid #27272a; padding-bottom: 20px;">PROJECTS</h1>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">GÜLCESU KAHRAMAN</h1>
+            <p class="hero-subtitle">Industrıal Desıgner</p>
         </div>
+        <div class="scroll-icon"></div>
     </section>
 
-    <section class="container" style="padding: 20px 10% 100px 10%;">
-        <div class="project-grid">
+   <section id="about" class="reveal active">
+        <div class="container">
+            <h2>ABOUT</h2>
             
-            <div class="project-card">
-                <div class="project-img" style="background-image: url('kitchen-render.jpeg');"></div>
-                <div class="project-info">
-                    <h3>FUTURISTIC KITCHEN UNIT</h3>
-                    <p>Minimalist Kitchen Sink & Cabinet Design</p>
-                </div>
-            </div>
+            <p style="margin-bottom: 25px; color: #a1a1aa;">
+                I graduated from the Department of Industrial Design at Yeditepe University. Through internships at Baykar Technology and GEMAK Group, I gained experience in product development, manufacturing processes, and production-oriented design. 
+            </p>
+            
+            <p style="margin-bottom: 25px; color: #a1a1aa;">
+                Following this, I worked as a creative director in the textile industry, acquiring knowledge in website design and e-commerce. Digital design and branding projects further strengthened my multifaceted perspective.
+            </p>
 
-            <div class="project-card">
-                <div class="project-img" style="background-image: url('living-room.jpeg');"></div>
-                <div class="project-info">
-                    <h3>MODERN LIVING SPACE</h3>
-                    <p>Interior Lighting & Furniture Concepts</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img" style="background-color: #27272a;"></div>
-                <div class="project-info">
-                    <h3>VALENTINE'S COLLECTION</h3>
-                    <p>Product Design Concepts</p>
-                </div>
-            </div>
-
+            <p style="color: #a1a1aa;">
+                With my creative and analytical approach, I aim to develop innovative products that combine technology, functionality, and aesthetics, and to create value within a dynamic team.
+            </p>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 40px; color: #52525b; font-size: 0.8rem;">
-        &copy; 2026 GÜLCESU KAHRAMAN
+
+    <section id="contact" class="reveal active">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Let's collaborate on your next design project.</p>
+            <p style="margin-top: 10px; color: white;">gulcesukahraman@example.com</p> 
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #52525b; font-size: 0.8rem; letter-spacing: 0.1em;">
+        &copy; 2026 GÜLCESU KAHRAMAN. ALL RIGHTS RESERVED.
     </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; // Görünürlük eşiğini biraz düşürdüm
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Sayfa yüklendiğinde çalışması için zamanlayıcı ekledim
+        window.onload = reveal;
+        reveal();
+    </script>
 
 </body>
 </html>
